@@ -1,0 +1,261 @@
+.form__main {
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.609), rgba(0, 0, 0, 0.952)), url(/images/1.jpeg);
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+    position: relative;
+    padding: 80px 50px 0px 50px;
+    clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+    backface-visibility: hidden;
+
+    @media screen and (max-width : 1000px) {
+        padding: 80px 10px 0px 15px;
+    }
+
+    @media screen and (max-width : 500px) {
+        padding: 80px 3px 0px 3px;
+    }
+
+    @media screen and (max-width : 410px) {
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.contact__heading {
+    font-size: 30px;
+    color: $color-white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form__box {
+
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80%;
+
+    @media screen and (max-width : 1000px) {
+        flex-basis: 70%;
+    }
+
+    @media screen and (max-width : 850px) {
+        flex-basis: 100%;
+    }
+}
+
+.fields {
+    width: 100%;
+}
+
+.fields .field {
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    @media screen and (max-width : 410px) {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.field label {
+    width: 80px;
+    padding: 10px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: $color-white;
+}
+
+.fields .field .input:focus {
+    outline: none;
+}
+
+.fields .field .input {
+    background-color: transparent;
+    margin: 10px;
+    font-size: 16px;
+    display: flex;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid $color-white;
+    color: $color-white;
+    font-family: 'Poppins', sans-serif;
+
+    @media screen and (max-width : 500px) {
+        margin: 8px;
+        font-size: 15px;
+        width: 100%;
+    }
+}
+
+/* TextArea */
+.area {
+    width: 100%;
+}
+
+.Create__area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+
+    @media screen and (max-width : 410px) {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.Create__area label {
+    width: 100px;
+    padding: 10px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: $color-white;
+
+    @media screen and (max-width : 500px) {
+
+        font-size: 15px;
+
+    }
+}
+
+.Create__area textarea {
+    background-color: transparent;
+    margin: 10px;
+    font-size: 16px;
+    display: flex;
+    width: 78%;
+    border: none;
+    border-bottom: 7px solid $color-primary;
+    color: $color-white;
+    font-family: 'Poppins', sans-serif;
+
+    @media screen and (max-width : 410px) {
+        width: 98%;
+    }
+}
+
+.Create__area textarea:focus {
+    outline: none;
+}
+
+.send__btn-div {
+    float: right;
+    margin: 15px 60px;
+    margin-bottom: 10px;
+
+    @media only screen and(max-width:800px) {
+        margin: 10px 10px;
+    }
+}
+
+.btn-send {
+    padding: 10px 2px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid $color-white;
+    font-family: 'Poppins', sans-serif;
+
+    @media only screen and(max-width:800px) {
+        padding: 8px 2px;
+        border-bottom: 1px solid $color-white;
+    }
+}
+
+.btn-send:focus {
+    outline: none;
+}
+
+.btn-send a {
+    border: none;
+    font-size: 20px;
+    color: $color-white;
+    text-decoration: none;
+
+    @media only screen and(max-width:800px) {
+        font-size: 15px;
+    }
+}
+
+/* image */
+.form__address {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 222;
+
+    background-position: center;
+    background-size: cover;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-self: stretch;
+
+    @media screen and (max-width : 850px) {
+        display: none;
+    }
+
+}
+
+.addres__div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    align-self: stretch;
+}
+
+.address {
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-top: 40px;
+
+}
+
+.font-awsome {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.fab {
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    margin-top: 40px;
+}
+
+.margin-left {
+    margin-left: 4.2rem;
+}
+
+// .margin-top{
+//     margin-top: 10rem;
+// }

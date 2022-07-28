@@ -1,0 +1,177 @@
+.gallery {
+    padding: 80px 8vw;
+
+
+    @media screen and (max-width : 410px) {
+        padding: 80px 3vw;
+    }
+
+    &__cards {
+        padding: 20px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        list-style: none;
+
+        &--item {
+            position: relative;
+            margin: 5px;
+            height: 300px;
+            width: 250px;
+            background-position:start;
+            background-size: cover;
+            border-radius: 10px;
+           
+            &:hover {
+                outline-offset: 5px;
+                outline: 5px solid $color-primary;
+                border-radius: 3px;
+                transform: scale(1.3);
+                transition: .5s ease-in-out;
+                cursor: pointer;
+                position: relative;
+                z-index: 4;
+            }
+
+            &-text {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-image: linear-gradient(to top, $color-primary, $color-primary);
+                border-radius: 0 0 5px 5px;
+                padding:5px 10px;
+                text-align: start;
+                &-heading{
+                    color: white;
+                    font-family: 'Poppins', sans-serif;
+                }
+               
+                &-btndiv {
+                    width: 100%;
+
+                    &-btn {
+                        background-color: transparent;
+                        border: none;
+                        padding: 5px 10px;
+                        background-color: $color-white2;
+                        border-radius: 3px;
+                        border-bottom: 5px solid $color-primary;
+                        display: inline;
+                        float: right;
+
+                        & a {
+                            font-size: .7rem;
+                            color: black;
+                            text-decoration: none;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .img-1 {
+            background-image: url(/images/hyip.png);
+        }
+        .img-2 {
+            background-image: url(/images/nexter.png);
+        }
+        .img-3 {
+            background-image: url(/images/nnt.png);
+        }
+        .img-4 {
+            background-image: url(/images/playsong.jfif);
+        }
+        .img-5 {
+            background-image: url(/images/robot.jfif);
+        }
+
+
+        &:hover &--item:not(:hover){
+            transform: scale(.95);
+            transition: 0.5s ease;
+        }
+
+    }
+    
+
+}
+
+.portfolio {
+    text-align: center;
+
+    .state__list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        &--item {
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            color: $color-primary;
+            font-weight: 700;
+            outline: none;
+            margin: .1rem;
+            padding: .2rem .5rem;
+            background-color: transparent;
+
+            @media screen and (max-width : 850px) {
+                display: none;
+            }
+
+            
+
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: $color-primary;
+
+                border: none;
+                border-radius: 50px;
+            }
+        }
+
+        .active-port {
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            color: $color-white2;
+            font-weight: 700;
+            outline: none;
+            margin: .1rem;
+            padding: .2rem .5rem;
+            background-color: $color-primary;
+            cursor: pointer;
+
+            @media screen and (max-width : 600px) {
+                font-size: .7rem;
+                padding: .2rem .4rem;
+            }
+
+            @media screen and (max-width : 410px) {
+                padding: .2rem 3vw;
+            }
+
+            @media screen and (max-width : 390px) {
+                font-size: .5rem;
+                padding: .1rem 2vw;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+.header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.609), rgba(0, 0, 0, 0.952)), url(/images/2.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%);
+    backface-visibility: hidden;
+    margin-top: -60px;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translateY(35vh);
+       
+
+        @media screen and (max-width : 830px) {
+            transform: translateY(28vh);
+        }
+
+        &-dp img {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+            display: none;
+        }
+
+        &-primary {
+            animation-name: Inright;
+            animation-name: Inright;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            color: $color-white;
+        }
+
+        &-secondary {
+            animation-name: Inleft;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            color: $color-white;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width : 830px) {
+    .header__text-dp img {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        padding: 5px;
+        display: block;
+        border: 5px solid $color-primary;
+    }
+}

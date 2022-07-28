@@ -1,0 +1,143 @@
+.services {
+    padding: 12% 5vw;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.609), rgba(0, 0, 0, 0.952)), url(/images/mail.png);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%);
+    backface-visibility: hidden;
+    height: auto;
+    @media screen and (max-width : 1300px){
+        padding: 12% 10vw;
+    }
+    @media screen and (max-width : 500px){
+        padding: 15% 3vw;
+    }
+  
+
+    &__cards {
+        list-style: none;
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-inline-start: 0px;
+        @media screen and (max-width : 500px){
+            margin: 1,.5rem auto;
+        }
+       
+        &--item {
+            background-color: $color-white2;
+            margin-bottom: 1rem;
+            width: 13rem;
+            border: 1px solid $color-white2;
+            border-radius: 5px;
+            align-self: stretch;
+           
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+                @media screen and (max-width : 1300px){
+                    margin-right: 0rem;
+                }
+               
+            }
+            @media screen and (max-width : 1300px){
+                width: 17rem;
+                margin: 1.5rem !important;
+            }
+          
+            &:hover {
+                border-bottom: 3px solid $color-primary;
+                border-right: 3px solid $color-primary;
+                transform: scale(1.1);
+                transition: .5s ease-in-out;
+                cursor: pointer;
+            }
+
+            &-img {
+                height: 20vh;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 5px;
+                padding: 0 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                @media screen and (max-width : 1300px){
+                    height: 35vh;
+                }
+
+            }
+
+            .img1 {
+                background-image: url(/images/screencapture-127-0-0-1-5500-about-html-2021-03-14-11_47_07.png);
+            }
+
+            .img2 {
+                background-image: url(/images/screencapture-127-0-0-1-5500-index-html-2021-03-21-13_40_03.png);
+            }
+
+            .img3 {
+                background-image: url(/images/download.jpg);
+            }
+
+            .img4 {
+                background-image: url(/images/screencapture-127-0-0-1-5500-index-html-2021-03-21-12_22_20.png);
+            }
+
+            .card-title {
+                background-color: $color-primary;
+                font-size: 1rem;
+                text-align: center;
+                color: white;
+                font-style: italic;
+                font-family: 'Poppins', sans-serif;
+                border: 2px solid white;
+                border-radius: 5px;
+                margin-bottom: -1rem;
+                @media screen and (max-width : 1000px){
+                    font-size: 1.2rem;
+                }
+                @media screen and (max-width : 500px){
+                    font-size: 1rem;
+                }
+            }
+
+            .card-body {
+                margin-top: 1.5rem;
+                padding: 0rem 1rem;
+                text-align: center;
+               
+                .card__text--list {
+                    list-style: none;
+                    padding-inline-start: 0px;
+
+                    &-item {
+                        text-align: center;
+                        padding: .5rem;
+                        font-size: .8rem;
+                        font-family: 'Poppins', sans-serif;
+                        @media screen and (max-width : 1000px){
+                            font-size: 1rem;
+                        }
+                        @media screen and (max-width : 340px){
+                            font-size: .8rem;
+                        }
+                       
+                        &:not(:last-child) {
+                            border-bottom: 1px solid $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ 

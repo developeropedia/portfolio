@@ -1,0 +1,300 @@
+.navigation {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start !important;
+    align-content: stretch;
+    backface-visibility: hidden;
+    padding: .5rem;
+    padding-bottom: 0px;
+    height: 60px;
+
+    @media screen and (max-width : 830px) {
+        padding: 0rem;
+    }
+
+    &__image-dp-logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        @media screen and (max-width : 830px) {
+            display: none;
+        }
+    }
+
+    &__image-dp-logo img {
+        height: 3.2rem;
+        width: 3.2rem;
+        padding: 5px;
+        border-radius: 50%;
+        margin: 0 0 0 20px;
+        border: 3px solid $color-white;
+
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        backface-visibility: hidden;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__nav {
+        display: flex;
+        align-self: stretch;
+        justify-content: center;
+        flex-basis: 72%;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        list-style: none;
+        align-self: stretch;
+        flex-basis: 100%;
+    }
+
+    &__item {
+        margin: 0 3px;
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__item:hover {
+        border-bottom: 2px solid purple;
+        backface-visibility: hidden;
+    }
+
+    &__link:link span,
+    .navigation__link:visited span {
+        display: none;
+    }
+
+    &__link:link,
+    &__link:visited {
+        display: inline-block;
+        font-size: 1rem;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: $color-white;
+        font-weight: 100;
+        padding: 1rem;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &__link:hover {
+        color: white;
+    }
+
+    &__left {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width : 830px) {
+
+    .navigation {
+        height: 0vh;
+        width: 0%;
+        background-color: none;
+        position: relative;
+    }
+
+    .navigation__label {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        z-index: 2000;
+        position: fixed;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .navigation__background {
+        height: 52px;
+        width: 52px;
+        position: fixed;
+        top: 20px;
+        right: 17px;
+        background-image: radial-gradient(purple, rgba(129, 3, 129, 0.692));
+        z-index: 1000;
+        border-radius: 50%;
+        transition: transform 0.8s cubic-bezier(0.8, 0, 0.07, 1);
+    }
+
+    .navigation__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        opacity: 0;
+        width: 0;
+    }
+
+    .navigation__list {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation__item {
+        margin: 10px;
+    }
+
+    .navigation__item:hover {
+        border-bottom: none;
+    }
+
+    .navigation__link:link,
+    .navigation__link:visited {
+        display: inline-block;
+        font-size: 30px;
+        color: white;
+        font-weight: 100;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+        background-size: 220%;
+        transition: all .2s;
+    }
+
+    .navigation__link:link span,
+    .navigation__link:visited span {
+        margin-right: 15px;
+        display: inline-block;
+    }
+
+    .navigation__link:hover,
+    .navigation__link:active {
+        background-position: 100%;
+        color: #55c57a;
+        transform: translateX(10px);
+    }
+
+    .header_btn {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        opacity: 0;
+        width: 0;
+
+    }
+
+    .header_btn1 {
+        position: absolute;
+        top: 80%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 1500;
+        margin: 0 20px;
+        font-size: 30px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: white;
+        font-weight: 100;
+        padding: 20px;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+    }
+
+    .navigation__input:checked~.navigation__background {
+        transform: scale(80);
+    }
+
+    .navigation__input:checked~.navigation__nav {
+        opacity: 1;
+        width: 110%;
+    }
+
+    .navigation__input:checked~.header_btn {
+        opacity: 1;
+        width: 110%;
+    }
+
+    .navigation__icon {
+        margin-top: 27px;
+        position: relative;
+        transition: all .2;
+    }
+
+    .navigation__icon,
+    .navigation__icon::before,
+    .navigation__icon::after {
+        height: 2px;
+        width: 25px;
+        background-color: $color-white2;
+        display: inline-block;
+    }
+
+    .navigation__icon::before,
+    .navigation__icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .navigation__icon::before {
+        top: -.3rem;
+    }
+
+    .navigation__icon::after {
+        top: .3rem;
+    }
+
+    .navigation__label:hover .navigation__icon:before {
+        top: -10px;
+    }
+
+    .navigation__label:hover .navigation__icon:after {
+        top: 10px;
+    }
+
+    .navigation__input:checked+.navigation__label .navigation__icon {
+        background-color: transparent;
+    }
+
+    .navigation__input:checked+.navigation__label .navigation__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    .navigation__input:checked+.navigation__label .navigation__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
